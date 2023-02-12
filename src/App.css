@@ -1,3 +1,7 @@
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
 /* TopBar**************************************** */
 .menu_top{
   display: flex;
@@ -22,7 +26,7 @@ margin-left: 70px;
 .navigation ul li a {
   font-weight: normal;
   font-size: 1.5vw;
-  margin-left: 20px;
+  /* margin-left: 20px; */
   color: white;
   text-decoration : none;
 
@@ -36,14 +40,67 @@ margin-left: 70px;
   margin-bottom: 5px;
 }
 
+.lien_nav span:nth-child(1) {
+  margin-right: 30px;
+}
+
 /* Leftbar */
 .menu_left {
   width: 7vw;
-  height: 10vw;
+  /* height: 10vw; */
   background-color: black;
 }
 
+main{
+  display: flex;
+}
+
 /* Profil */
+.dashbord{
+margin: 45px;
+flex-grow: 1;
+}
+
 .salutation{
   
+}
+
+.nom{
+  display: flex;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.nom p{
+  margin: 0;
+}
+
+.nom p:nth-child(1) {
+  margin-right: 18px;
+  padding-left: 51px;
+}
+
+.nom p:nth-child(2) {
+color: red;
+}
+
+.completion{
+  margin-top: 24px;
+  margin-left: 50px;
+}
+
+/* graph */
+svg.recharts-surface {
+  background-color: #FBFBFB;
+}
+/*.recharts-tooltip-wrapper {
+  font-size: 10px;
+  padding: 10px;
+  background-color: red;
+  border: 0;
+  color: white;
+}*/
+
+.custom-tooltip{
+  background-color: red;
 }
