@@ -91,7 +91,7 @@ color: red;
 
 /* graph */
 svg.recharts-surface {
-  background-color: #FBFBFB;
+  /* background-color: #FBFBFB; */
 }
 /*.recharts-tooltip-wrapper {
   font-size: 10px;
@@ -102,5 +102,5 @@ svg.recharts-surface {
 }*/
 
 .custom-tooltip{
-  background-color: red;
+  /* background-color: red; */
 }
