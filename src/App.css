@@ -8,56 +8,82 @@ body{
   background-color: black;
 }
 
-.navigation{
-  width: 60%;
-margin-left: 70px;
+.logo {
+  margin-right: 120px;
 }
 
-.navigation ul{
+.navigation ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
   list-style-type: none;
   margin: 0;
   height: 100%;
-  
+  width: 60vw;
+  padding-left: 50px;
+  padding: 0;
 }
 
 .navigation ul li a {
   font-weight: normal;
   font-size: 1.5vw;
-  /* margin-left: 20px; */
   color: white;
-  text-decoration : none;
-
+  text-decoration: none;
 }
 
 .image_logo {
-  /* width: 30%; */
   width: 11vw;
   margin-left: 25px;
   margin-top: 15px;
   margin-bottom: 5px;
 }
 
-.lien_nav span:nth-child(1) {
-  margin-right: 30px;
+@media (min-height: 1800px) {
+  .menu_left {
+    height: 100vh;
 }
+
+}
+
+
 
 /* Leftbar */
 .menu_left {
   width: 7vw;
-  /* height: 10vw; */
   background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* height: 100vh; */
 }
+
+.copyright{
+  transform: rotate(270deg);
+  color: white;
+  position:fixed;
+  left: -10px;
+  /* top: 69%; */
+
+  /* bottom: 30%; */
+  /* bottom: 22%; */
+  bottom: 5vw;
+
+
+  /* bottom: 13vw; */
+  margin: 0;
+  font-size: 12px;
+}
+
 
 main{
   display: flex;
+  /* height: 100%; */
 }
 
 /* Profil */
 .dashbord{
-margin: 45px;
+/* margin: 45px; */
+margin: 3vw;
 flex-grow: 1;
 }
 
