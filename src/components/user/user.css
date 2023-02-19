@@ -1,0 +1,28 @@
+.user{
+  margin-bottom: 70px;
+}
+
+.nom{
+  display: flex;
+  font-size: 38px;
+  font-weight: bold;
+}
+
+.nom p{
+  margin: 0;
+}
+
+.nom p:nth-child(1) {
+    margin-right: 7px;
+    padding-left: 51px;
+}
+
+.nom p:nth-child(2) {
+color: red;
+}
+
+.result{
+    font-size: 14.3px;
+    margin-top: 20px;
+    margin-left: 50px;
+}

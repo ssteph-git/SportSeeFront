@@ -1,9 +1,11 @@
+import './profil.css';
 import { NavLink } from "react-router-dom";
 import { useParams } from "react-router";
 import { getUser, getActivity, getSession, getPerformance } from '../service/Data';
 import React, { useEffect, useState } from 'react';
 import Erreur from "./Erreur";
-import Salutation from "../components/salutation";
+import User from "../components/user/user";
+import MyBar from "../components/charts/bar/mybar";
 import Chart from "../components/chart";
 import FormatData from "../service/FormatData";
 
@@ -31,21 +33,28 @@ const Profil = function (props) {
     }, []);
 
     let formatData = new FormatData();
-    let FormatDataBar,FormatDataLine,FormatDataRadar,FormatDataPie=null;
-    if ((activity&&session&&performance&&user) != null) {
+    let FormatDataBar, FormatDataLine, FormatDataRadar, FormatDataPie = null;
+    if ((activity && session && performance && user) != null) {
         FormatDataBar = formatData.Bar(activity.data.sessions);
         FormatDataLine = formatData.Line(session.data.sessions);
         FormatDataRadar = formatData.radar(performance.data);
         FormatDataPie = formatData.pie(user.data);
-    }  
+    }
 
 
     return (<>
 
         {performance == null ? (<Erreur />) :
             (<div className="dashbord">
-                <Salutation name={user.data.userInfos.firstName} />
-                <Chart dataBar={FormatDataBar} dataLine={FormatDataLine} dataRadar={FormatDataRadar} dataPie={FormatDataPie} type='BarChartLineChart'/>
+                <User name={user.data.userInfos.firstName} />
+                <div className="allComponents">
+                    <div className="allCharts">
+                        <MyBar />
+                    </div>
+                    <div className="allIndicators"></div>
+                </div>
+
+                {/* <Chart dataBar={FormatDataBar} dataLine={FormatDataLine} dataRadar={FormatDataRadar} dataPie={FormatDataPie} type='BarChartLineChart'/> */}
             </div>)
         }
 

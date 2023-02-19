@@ -1,7 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Topbar from './components/topbar';
-import Leftbar from './components/leftbar';
+import Topbar from './components/topbar/topbar';
+import Leftbar from './components/leftbar/leftbar';
 
 import Accueil from './pages/Accueil';
 import Profil from './pages/Profil';

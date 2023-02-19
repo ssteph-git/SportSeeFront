@@ -1,0 +1,8 @@
+.allComponents{
+    display: flex;
+}
+
+.allCharts {
+    display: flex;
+    padding-left: 35px;
+}

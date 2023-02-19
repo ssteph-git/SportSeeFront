@@ -1,0 +1,34 @@
+/* Leftbar */
+.menu_left {
+    width: 7vw;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* height: 100vh; */
+  }
+  
+  .copyright{
+    transform: rotate(270deg);
+    color: white;
+    position:fixed;
+    left: -10px;
+    /* top: 69%; */
+  
+    /* bottom: 30%; */
+    /* bottom: 22%; */
+    bottom: 5vw;
+  
+  
+    /* bottom: 13vw; */
+    margin: 0;
+    font-size: 12px;
+  }
+
+
+  @media (min-height: 1800px) {
+    .menu_left {
+      height: 100vh;
+  }
+  
+  }

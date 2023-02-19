@@ -1,4 +1,6 @@
 import { NavLink } from "react-router-dom";
+import './topbar.css';
+import logo from './assets/logo.png'
 
 const Topbar = function (props) {
 
@@ -6,7 +8,7 @@ const Topbar = function (props) {
         <header>
             <div className="menu_top">
                 <div className="logo">
-                    <img className="image_logo" src="/assets/logo.png" alt="Logo du site Sportsee" />
+                    <img className="image_logo" src={logo} alt="Logo du site Sportsee" />
                 </div>
                 <div className="navigation">
                     <ul>
