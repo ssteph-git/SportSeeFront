@@ -56,9 +56,7 @@ const Myline = function (props) {
           <g transform={`translate(${x},${y})`}>
             <text
               x={-3}
-              y={-13}
-            //   dy={-31}
-            //   textAnchor="end"
+              y={5}
               fill="white"
               transform="rotate(0)"
             >
@@ -71,37 +69,31 @@ const Myline = function (props) {
 
     return (
         <div className='myLine'>
+           
             <LineChart
            
-                width={280}
-                height={280}
+                width={210}
+                height={210}
                 data={FormatDataLine}
                 margin={{
                     top: 0,
-                    right: 10,
-                    left: 20,
+                    right: 0,
+                    left: 0,
                     bottom: 0,
                 }}
             >
 
-                <CartesianGrid strokeDasharray="3 3" width={280} height={280} verticalFill={['#FF0000', '#FF0000', '#FF0000', '#FF0000', '#FF0000','#E60000', '#E60000','#E60000',]} />
-                <XAxis dataKey="day" axisLine={false} tickLine={false}padding={{right:10, left:10}} tick={<CustomizedAxisTick />}/>
-                <YAxis dataKey="sessionLength" domain={['dataMin - 10', "dataMax + 5"]} hide={true}/>
+                <CartesianGrid strokeDasharray="3 3" width={220} height={210} verticalFill={['#FF0000', '#FF0000', '#FF0000', '#FF0000', '#FF0000','#FF0000', '#E60000','#E60000',]} />
+                <XAxis dataKey="day" axisLine={false} tickLine={false}padding={{right:15, left:15}} tick={<CustomizedAxisTick />}/>
+                <YAxis dataKey="sessionLength" domain={['dataMin-10', "dataMax+40"]} hide={true}/>
                 <Tooltip content={<CustomTooltip monChart="LineChart" />} wrapperStyle={{ backgroundColor: 'white', border: '0px', borderRadius: 3, outline: 'none', fontSize: '10px', color: 'black', padding: '5px' }} />
                 <Line type="monotone" dataKey="sessionLength" stroke="rgba(255, 255, 255, 0.7)" dot={false} strokeWidth={2} background={{
        radius: 20
    }}/>
                
-                <text
-                    x='20%'
-                    y='10%'
-                    dy={+12}
-                    style={{ fontSize: 18, fontWeight: 'bold', fill: '#22AA22' }}
-                    width={200}
-                >
-                    8.3%
-                </text>
+               
             </LineChart>
+            <div className='textLine'>Durrée moyenne des sessions</div>
         </div>
     )
 
