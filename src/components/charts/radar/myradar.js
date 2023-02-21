@@ -29,7 +29,6 @@ const MyRadar = function (props) {
         FormatDataRadar = formatData.radar(performance.data);
         return (
             <div className='myRadar'>
-    
                 <RadarChart
                     cx={110}
                     cy={110}
@@ -38,20 +37,13 @@ const MyRadar = function (props) {
                     height={210}
                     data={FormatDataRadar.data}
                 >
-    
-                    {/* <PolarGrid /> */}
                     <PolarGrid gridType="polygon" radialLines={false} stroke="white" />
-    
-                    {/* <PolarAngleAxis dataKey="kind" /> */}
-                    <PolarAngleAxis dataKey="kind" tick={{ fill: "white", fontSize: 15 }} fill="#1F2427" />
-                    {/* <PolarRadiusAxis stroke="#FF0000"/> */}
+                    <PolarAngleAxis dataKey="kind" tick={{ fill: "white", fontSize: 10 }} fill="#1F2427" />
                     <Radar
                         name="Mike"
                         dataKey="value"
-                        // stroke="#FF0000"
                         fill="#FF0000"
                         fillOpacity={0.6}
-                        // background={{ fill: 'black' }}
                         wrapperStyle={{ backgroundColor: 'white', border: '0px', borderRadius: 3, outline: 'none', fontSize: '10px', color: 'black', padding: '5px' }} />
                 </RadarChart>
             </div>

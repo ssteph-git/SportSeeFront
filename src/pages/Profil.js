@@ -8,6 +8,7 @@ import User from "../components/user/user";
 import MyBar from "../components/charts/bar/mybar";
 import Myline from '../components/charts/line/myline';
 import MyRadar from '../components/charts/radar/myradar';
+import MyPie from '../components/charts/pie/mypie';
 import Chart from "../components/chart";
 import FormatData from "../service/FormatData";
 import { Radar } from 'recharts';
@@ -56,6 +57,7 @@ const Profil = function (props) {
                         <div className='miniCharts'>
                                 <Myline />
                                 <MyRadar/>
+                                <MyPie/>
                         </div>
                     </div>
                     <div className="allIndicators"></div>

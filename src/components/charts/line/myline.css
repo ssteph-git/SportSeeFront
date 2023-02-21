@@ -1,23 +1,23 @@
-.myLine .recharts-surface{
+.myLine .recharts-surface {
     border-radius: 6px;
     margin-left: 15px;
 }
 
-.myLine text{
+.myLine text {
     width: 2px;
 }
 
 
-    .textLine {
-        position: absolute;
-        bottom: 155px;
-        left: 40px;
-        width: 150px;
-        font-size: 12px;
-        color: #FF7E7E;
-    }
+.textLine {
+    position: absolute;
+    bottom: 155px;
+    left: 40px;
+    width: 150px;
+    font-size: 12px;
+    color: #FF7E7E;
+}
 
 
-.myLine{
-    position:relative
+.myLine {
+    position: relative
 }

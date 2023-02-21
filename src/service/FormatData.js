@@ -80,16 +80,20 @@ class FormatData{
                 // x.kind = "";
               }
             
-            // x.day[i] = String(x.day)
-            // x.sessionLength =  parseInt(x.sessionLength, 10)
+
             return x;
         })
        return e;
     };
 
     pie(e){
-       e.score = parseFloat(e.score);
-       return e.score;
+        if(isNaN( e.score)){
+            e.todayScore = parseFloat(e.todayScore);
+            return e.todayScore;
+        }else{
+            e.score = parseFloat(e.score);
+            return e.score;
+        }
     };
 
     

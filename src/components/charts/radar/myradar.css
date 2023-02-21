@@ -1,12 +1,7 @@
-.myRadar{
-    /* position: absolute; */
-}
-
 .myRadar .recharts-surface{
     background-color: #282D30;
 }
 
 .myRadar .recharts-surface{
     border-radius: 6px;
-    /* margin-left: 15px; */
 }

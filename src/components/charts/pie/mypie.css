@@ -1,0 +1,7 @@
+.myPie .recharts-surface{
+    background-color: #FBFBFB;
+}
+
+.myRadar .recharts-surface{
+    border-radius: 6px;
+}
