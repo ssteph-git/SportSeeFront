@@ -3,7 +3,6 @@ import './check.css';
 // import yoga from "./assets/yoga.png";
 const Check = function (props) {
 
-    console.log("Chek",props.checkIcon);
     return (
         <>
             <div className='Background-icon'>

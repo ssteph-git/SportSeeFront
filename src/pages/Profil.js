@@ -6,6 +6,7 @@ import React, { useEffect, useState } from 'react';
 import Erreur from "./Erreur";
 import User from "../components/user/user";
 import MyBar from "../components/charts/bar/mybar";
+import Myline from '../components/charts/line/myline';
 import Chart from "../components/chart";
 import FormatData from "../service/FormatData";
 
@@ -50,6 +51,9 @@ const Profil = function (props) {
                 <div className="allComponents">
                     <div className="allCharts">
                         <MyBar />
+                        <div className='miniCharts'>
+                                <Myline />
+                        </div>
                     </div>
                     <div className="allIndicators"></div>
                 </div>

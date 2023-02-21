@@ -5,3 +5,12 @@
 .myBar .recharts-surface{
     background-color: #FBFBFB;
 }
+
+/* .recharts-legend-item-text span:nth-child(1){ */
+.legend-item-0:nth-child(1) span{
+margin-right: 5px;
+}
+
+/* .myBar .recharts-legend-item-text{
+    color:#888C9C ;
+} */
