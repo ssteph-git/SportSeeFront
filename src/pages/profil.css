@@ -7,3 +7,8 @@
     flex-direction: column;
     padding-left: 35px;
 }
+
+.miniCharts{
+    display: flex;
+    justify-content: space-between;
+}

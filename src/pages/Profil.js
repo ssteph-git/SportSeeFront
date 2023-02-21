@@ -7,8 +7,10 @@ import Erreur from "./Erreur";
 import User from "../components/user/user";
 import MyBar from "../components/charts/bar/mybar";
 import Myline from '../components/charts/line/myline';
+import MyRadar from '../components/charts/radar/myradar';
 import Chart from "../components/chart";
 import FormatData from "../service/FormatData";
+import { Radar } from 'recharts';
 
 const Profil = function (props) {
 
@@ -53,6 +55,7 @@ const Profil = function (props) {
                         <MyBar />
                         <div className='miniCharts'>
                                 <Myline />
+                                <MyRadar/>
                         </div>
                     </div>
                     <div className="allIndicators"></div>
