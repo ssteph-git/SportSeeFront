@@ -1,3 +1,8 @@
+.dashbord{
+    margin: 3vw;
+    flex-grow: 1;
+    }
+
 .allComponents{
     display: flex;
 }
@@ -6,9 +11,19 @@
     display: flex;
     flex-direction: column;
     padding-left: 35px;
+    padding-right: 35px;
+    width: 69%;
+    height: 42.5vw;
 }
 
 .miniCharts{
     display: flex;
     justify-content: space-between;
+}
+
+.allIndicators {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
 }

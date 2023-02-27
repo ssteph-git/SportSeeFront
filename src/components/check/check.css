@@ -1,7 +1,7 @@
-.Background-icon{
+.Background-icon {
     background-color: white;
-    width: 3.8vw;
-    height: 3.8vw;
+    width: 4.3vw;
+    height: 4.3vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,17 +13,15 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 19.2vw;
+    height: 21.8vw;
     position: fixed;
     left: 20px;
-
-    
-    /* top: 27%; */
-    top: 30%;
+    top: 34%;
 }
 
 
 .check_icon {
     width: 2vw;
     height: 2vw;
+    overflow: clip;
 }

@@ -8,7 +8,7 @@ import {
     Radar,
     RadarChart,
     PolarGrid,
-    PolarAngleAxis,
+    PolarAngleAxis
 } from "recharts";
 
 

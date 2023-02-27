@@ -5,6 +5,7 @@
   
   .logo {
     margin-right: 120px;
+
   }
   
   .navigation ul {
@@ -14,10 +15,10 @@
     list-style-type: none;
     margin: 0;
     height: 100%;
-    width: 60vw;
+    width: 69vw;
     padding-left: 50px;
     padding: 0;
-  }
+}
   
   .navigation ul li a {
     font-weight: normal;
@@ -27,8 +28,9 @@
   }
   
   .image_logo {
-    width: 11vw;
+    width: 12vw;
     margin-left: 25px;
     margin-top: 15px;
     margin-bottom: 5px;
-  }
+    overflow: clip;
+}

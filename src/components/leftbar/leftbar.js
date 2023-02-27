@@ -5,17 +5,15 @@ import swim from "../check/assets/swim.png";
 import bike from "../check/assets/bike.png";
 import force from "../check/assets/force.png";
 
-
-
 const Leftbar = function (props) {
 
     return (
         <div className="menu_left">
             <div className="checkIcon_total">
-                <Check checkIcon={yoga} />
-                <Check checkIcon={swim} />
-                <Check checkIcon={bike} />
-                <Check checkIcon={force} />
+                <Check checkIcon={yoga} navigation={"#"} />
+                <Check checkIcon={swim} navigation={"#"}/>
+                <Check checkIcon={bike} navigation={"#"}/>
+                <Check checkIcon={force} navigation={"#"}/>
             </div>
             <div>
                 <p className="copyright"><small> Copyright Sportsee 2020</small></p>

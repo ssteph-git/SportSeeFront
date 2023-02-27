@@ -17,15 +17,12 @@ function App() {
       <main>
       <Leftbar />
       <Routes>
-      
       <Route exact path="/" element={<Accueil/>}></Route>
       <Route path="/user/:id" element={<Profil/>}></Route>
           <Route path="/parameters" element={<Reglage/>}></Route>
           <Route path="/community" element={<Communaute/>}></Route>
           <Route path="*" element={<Erreur/>}></Route>
         </Routes>
-      {/* <main> */}
-        {/* <Leftbar /> */}
       </main>
     </Router>
   );

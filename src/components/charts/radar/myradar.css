@@ -5,3 +5,12 @@
 .myRadar .recharts-surface{
     border-radius: 6px;
 }
+
+@media (max-width: 1137px) {
+
+    .myRadar .recharts-surface{
+        width:150px;
+        height:150px;
+    }
+  
+  }

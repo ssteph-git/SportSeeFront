@@ -7,7 +7,6 @@
     width: 2px;
 }
 
-
 .textLine {
     position: absolute;
     bottom: 155px;
@@ -20,4 +19,12 @@
 
 .myLine {
     position: relative
+}
+
+@media (max-width: 1137px) {
+    .myLine .recharts-surface {
+        width: 150px;
+        height: 150px;
+    }
+
 }

@@ -1,0 +1,68 @@
+.result{
+    background-color:#FBFBFB;
+    display: flex;
+}
+
+.leftResult {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.BkgroundRed{
+    background-color: #FBEAEA;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BkgroundBlue{
+    background-color: #E9F4FB;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BkgroundYellow{
+    background-color: #FBF6E5;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.BkgroundPink{
+    background-color: #FBEAEF;
+    width: 4vw;
+    height: 4vw;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageIcon{
+    width: 1.2vw;
+    overflow: clip;
+}
+
+.valueResult {
+    margin-top: 22px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.typeResult {
+    margin-top: 0;
+    margin-bottom: 22px;
+    font-size: 13px;
+}

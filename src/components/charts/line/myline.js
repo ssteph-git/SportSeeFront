@@ -13,6 +13,14 @@ import {
     Tooltip,
 } from "recharts";
 
+/**
+ *  Custom tooltip of LineChart
+ * https://recharts.org/en-US/examples/CustomContentOfTooltip
+ * @param {boolean} active
+ * @param {Array} payload
+ * @param {string} label
+ * @returns 
+ */
 const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
         let barKcal = "";
@@ -63,35 +71,33 @@ const Myline = function (props) {
     let formatData = new FormatData();
     let FormatDataLine = null;
     if ((session) != null) {
-        FormatDataLine = formatData.Line(session.data.sessions);
+        FormatDataLine = formatData.line(session.data.sessions);
 
 
         return (
             <div className='myLine'>
+                    <LineChart
+                        width={210}
+                        height={210}
+                        data={FormatDataLine}
+                        margin={{
+                            top: 0,
+                            right: 0,
+                            left: 0,
+                            bottom: 0,
+                        }}
+                    >
 
-                <LineChart
-
-                    width={210}
-                    height={210}
-                    data={FormatDataLine}
-                    margin={{
-                        top: 0,
-                        right: 0,
-                        left: 0,
-                        bottom: 0,
-                    }}
-                >
-
-                    <CartesianGrid strokeDasharray="3 3" width={220} height={210} verticalFill={['#FF0000', '#FF0000', '#FF0000', '#FF0000', '#FF0000', '#FF0000', '#E60000', '#E60000',]} />
-                    <XAxis dataKey="day" axisLine={false} tickLine={false} padding={{ right: 15, left: 15 }} tick={<CustomizedAxisTick />} />
-                    <YAxis dataKey="sessionLength" domain={['dataMin-10', "dataMax+40"]} hide={true} />
-                    <Tooltip content={<CustomTooltip monChart="LineChart" />} wrapperStyle={{ backgroundColor: 'white', border: '0px', borderRadius: 3, outline: 'none', fontSize: '10px', color: 'black', padding: '5px' }} />
-                    <Line type="monotone" dataKey="sessionLength" stroke="rgba(255, 255, 255, 0.7)" dot={false} strokeWidth={2} background={{
-                        radius: 20
-                    }} />
+                        <CartesianGrid strokeDasharray="3 3" width={220} height={210} verticalFill={['#FF0000', '#FF0000', '#FF0000', '#FF0000', '#FF0000', '#FF0000', '#E60000', '#E60000',]} />
+                        <XAxis dataKey="day" axisLine={false} tickLine={false} padding={{ right: 15, left: 15 }} tick={<CustomizedAxisTick />} />
+                        <YAxis dataKey="sessionLength" domain={['dataMin-10', "dataMax+40"]} hide={true} />
+                        <Tooltip content={<CustomTooltip monChart="LineChart" />} wrapperStyle={{ backgroundColor: 'white', border: '0px', borderRadius: 3, outline: 'none', fontSize: '10px', color: 'black', padding: '5px' }} />
+                        <Line type="monotone" dataKey="sessionLength" stroke="rgba(255, 255, 255, 0.7)" dot={false} strokeWidth={2} background={{
+                            radius: 20
+                        }} />
 
 
-                </LineChart>
+                    </LineChart>
                 <div className='textLine'>Durrée moyenne des sessions</div>
             </div>
         )

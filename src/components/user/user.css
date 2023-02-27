@@ -1,28 +1,29 @@
-.user{
-  margin-bottom: 70px;
+.user {
+  margin-top: 8px;
+  margin-bottom: 65px;
 }
 
-.nom{
+.nom {
   display: flex;
   font-size: 38px;
   font-weight: bold;
 }
 
-.nom p{
+.nom p {
   margin: 0;
 }
 
 .nom p:nth-child(1) {
-    margin-right: 7px;
-    padding-left: 51px;
+  margin-right: 7px;
+  padding-left: 51px;
 }
 
 .nom p:nth-child(2) {
-color: red;
+  color: red;
 }
 
-.result{
-    font-size: 14.3px;
-    margin-top: 20px;
-    margin-left: 50px;
+.resultUser {
+  font-size: 14.3px;
+  margin-top: 20px;
+  margin-left: 50px;
 }
