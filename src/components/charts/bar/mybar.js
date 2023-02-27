@@ -27,9 +27,6 @@ const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
         let barKcal = "";
         if (payload[1] != undefined) {
-            console.log("active", active);
-            console.log("payload", payload);
-            console.log("label", label);
             barKcal = <p className="label">{` ${payload[1].value} Kcal`}</p>
         }
         return (
