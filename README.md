@@ -10,7 +10,7 @@
 #  2.a.Install backend in the port 3000(https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-#  2.b.Install the project
+#  2.b.Install this project
 #  2.c.Open file "data.js" in folder "service" (./src/service/Data.js)
 #  2.d.Change the second line to "true" (const mockedData = false;)
 #  2.e.Starting the project (npm start)
