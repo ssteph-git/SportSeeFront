@@ -3,8 +3,8 @@
 # 1.without backend
 ## 1.a.Install dependencies (npm i)
 ## 1.b.Open file "data.js" in folder "service" (./src/service/Data.js)
-#  1.c.Change the second line to "false" (const mockedData = false;)
-#  1.d.Starting the project (npm start)
+##  1.c.Change the second line to "false" (const mockedData = false;)
+##  1.d.Starting the project (npm start)
 
 # 2.With the backend
 #  2.a.Install backend in the port 3000(https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard)
