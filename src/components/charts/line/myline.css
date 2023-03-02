@@ -27,4 +27,25 @@
         height: 150px;
     }
 
+    .myLine {
+        width: 150px;
+        height:150px;
+     }
+
+     .textLine {
+
+        bottom: 110px;
+
+    }
+     
+
+}
+
+@media (max-height: 7000px) {
+    .copyright {
+
+        font-size: 10px;
+    }
+     
+
 }
