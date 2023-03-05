@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/charts/bar/mybar.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/charts/bar/mybar.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import './mybar.css';
+import { useParams } from "react-router";
+import React, { useEffect, useState } from 'react';
+import { getActivity } from '../../../service/Data';
+import FormatData from '../../../service/FormatData';
+
+import {
+    BarChart,
+    Bar,
+    XAxis,
+    YAxis,
+    CartesianGrid,
+    Tooltip,
+    Legend,
+    ResponsiveContainer
+} from "recharts";
+
+/**
+ *  Custom tooltip of BarChart
+ * https://recharts.org/en-US/examples/CustomContentOfTooltip
+ * @param {boolean} active
+ * @param {Array} payload
+ * @param {string} label
+ * @returns 
+ */
+const CustomTooltip = ({ active, payload, label }) => {
+    if (active &amp;&amp; payload &amp;&amp; payload.length) {
+        let barKcal = "";
+        if (payload[1] != undefined) {
+            barKcal = &lt;p className="label">{` ${payload[1].value} Kcal`}&lt;/p>
+        }
+        return (
+            &lt;div className="custom-tooltip">
+                &lt;p className="label">{` ${payload[0].value} Kg`}&lt;/p>
+                {barKcal}
+            &lt;/div>
+        );
+    }
+
+    return null;
+};
+
+/**
+ * Customize the legend
+ * https://recharts.org/en-US/api/Legend
+ * @param {string} value 
+ * @returns 
+ */
+const CustomLegend = (value) => {
+    return (
+        &lt;>
+            &lt;span style={{ color: "#74798C" }}>{value}&lt;/span>
+        &lt;/>
+    )
+}
+
+
+const MyBar = function (props) {
+    let { id } = useParams();
+    const [activity, setActivity] = useState(null)
+    useEffect(() => {
+
+        getActivity(id).then(activity => {
+            setActivity(activity);
+        })
+
+    }, []);
+
+    let formatData = new FormatData();
+    let FormatDataBar = null;
+    if ((activity) != null) {
+        FormatDataBar = formatData.bar(activity.data.sessions);
+        return (
+
+            &lt;div className="myBar">
+                &lt;ResponsiveContainer width="100%" height="100%">
+                    &lt;BarChart
+                        width={1680}
+                        height={234}
+                        data={FormatDataBar}
+                        barCategoryGap={30}
+                        margin={{
+                            top: 0,
+                            right: 0,
+                            left: 20,
+                            bottom: 5
+                        }}
+                    >
+                        &lt;CartesianGrid vertical={false} strokeDasharray="1 3" />
+                        &lt;Legend wrapperStyle={{ paddingTop: "15px", fontSize: "13px", paddingRight: "5px" }} formatter={CustomLegend} height={50} iconSize={8} iconType="circle" align="right" verticalAlign="top" />
+                        &lt;XAxis dataKey="day" axisLine={false} tickLine={false} tickMargin={10} />
+                        &lt;YAxis dataKey="kilogram" orientation='right' axisLine={false} tickLine={false} tickMargin={10} domain={['auto', 'dataMax+500']} hide={true} tickCount="3" />
+                        &lt;YAxis yAxisId="kilogram" dataKey="kilogram" orientation='right' axisLine={false} tickLine={false} tickMargin={10} domain={['datamin-', 'dataMax+4']} />
+
+                        &lt;Tooltip content={&lt;CustomTooltip monChart="BarChart" />} wrapperStyle={{ backgroundColor: 'red', border: '0px', borderRadius: 3, outline: 'none', fontSize: '10px', color: 'white', padding: '5px' }} />
+                        &lt;Bar name="Poid (kg)" dataKey="kilogram" fill="#1F2427" radius={[20, 20, 0, 0]} maxBarSize={8} minPointSize={60} />
+                        &lt;Bar name="Calories brûlées (Kcal)" dataKey="calories" fill="#EA2B2B" radius={[20, 20, 0, 0]} maxBarSize={8} minPointSize={20} />
+                        &lt;text
+                            x='6%'
+                            y='7%'
+                            dy={+12}
+                            style={{ fontSize: 12, fontWeight: 'bold', fill: '#1D2237' }}
+                            width={200}
+                        >
+                            Activité quotidienne
+                        &lt;/text>
+                    &lt;/BarChart>
+                &lt;/ResponsiveContainer>
+            &lt;/div>
+
+        )
+    }
+}
+export default MyBar;
+
+
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="FormatData.html">FormatData</a></li></ul><h3>Global</h3><ul><li><a href="global.html#CustomLegend">CustomLegend</a></li><li><a href="global.html#CustomTooltip">CustomTooltip</a></li><li><a href="global.html#getActivity">getActivity</a></li><li><a href="global.html#getPerformance">getPerformance</a></li><li><a href="global.html#getSession">getSession</a></li><li><a href="global.html#getUser">getUser</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Sun Mar 05 2023 11:56:15 GMT-0400 (UTC−04:00)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
